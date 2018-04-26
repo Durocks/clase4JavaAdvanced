@@ -19,7 +19,7 @@ public class ServerObject {
                 persona=(Persona)in.readObject();
                 System.out.println(persona);
                 out.writeObject("Se recibio el objecto.");
-            } catch (ClassCastException e) {
+            } catch (ClassCastException | ClassNotFoundException e) {
                 System.out.println("Objeto incorrecto.");
                 out.writeObject("Objeto incorrecto.");
             }

@@ -9,7 +9,7 @@ public class ClientObject {
     public static void main(String[] args) throws IOException {
         Persona persona = new Persona ("Cristobal", "Lagos", 25);
         
-        try (Socket so = new Socket ("localhost", 8000)) {
+        try (Socket so = new Socket ("192.168.2.128", 8000)) {
             ObjectOutputStream out = new ObjectOutputStream(so.getOutputStream());
             ObjectInputStream in = new ObjectInputStream(so.getInputStream());
             out.writeObject(persona);

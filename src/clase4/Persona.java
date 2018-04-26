@@ -3,6 +3,7 @@ package clase4;
 import java.io.Serializable;
 
 public class Persona implements Serializable{
+    private static final long serialVersionUID = -5227110610441974088L;
     
     private String nombre;
     private String apellido;
@@ -18,8 +19,6 @@ public class Persona implements Serializable{
     public String toString() {
         return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + '}';
     }
-
-    
     
     public int getEdad() {
         return edad;
